@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_worker")
+@Table(name = "tb_workers")
 public class Worker implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -21,5 +21,7 @@ public class Worker implements Serializable {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
+
+  @Column(name = "daily__income")
   private Double dailyIncome;
 }
