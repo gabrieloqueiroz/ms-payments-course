@@ -18,15 +18,15 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id){
+    public ResponseEntity<User> findById(@PathVariable Long id) {
 
         User user = userService.findById(id);
 
         return ResponseEntity.ok(user);
     }
 
-        @GetMapping(value = "/search")
-    public ResponseEntity<User> findByEmail(@RequestParam String email){
+    @GetMapping(value = "/search")
+    public ResponseEntity<User> findByEmail(@RequestParam String email) {
 
         User user = userService.findByEmail(email);
 
