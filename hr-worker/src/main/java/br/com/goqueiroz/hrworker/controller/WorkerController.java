@@ -21,21 +21,9 @@ import java.util.List;
 public class WorkerController {
   private WorkerService workerService;
 
-  private static Logger logger = LoggerFactory.getLogger(WorkerController.class);
-
-  @Value("${test.config}")
-  private String conf;
-
   @Autowired
   public WorkerController(WorkerService workerService) {
     this.workerService = workerService;
-  }
-
-  @GetMapping("/config")
-  public ResponseEntity<Void> getConfig(){
-    logger.info(conf);
-
-    return ResponseEntity.noContent().build();
   }
 
   @GetMapping
